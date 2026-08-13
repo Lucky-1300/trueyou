@@ -1,10 +1,20 @@
+import Landing from "./pages/Landing";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LandingPage from "./pages/Landing";
+import CommunityPage from "./pages/Community";
+
+
+import "./index.css";
+
 function App() {
   return (
-    <div className="min-h-screen bg-purple-100 flex items-center justify-center">
-      <h1 className="text-5xl font-bold text-purple-700">
-        TrueYou 🌈
-      </h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/community" element={<CommunityPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
